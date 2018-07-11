@@ -158,8 +158,24 @@
   # Enable sound.
   # sound.enable = true;
   # hardware.pulseaudio.enable = true;
-  
-  # The NixOS release to be compatible with for stateful data such as databases.
-  # system.stateversion = "18.03";
+
+  # Define a user account. Don't forget to set a password with ‘passwd’.
+  users.extraUsers.Jesse = {
+    isNormalUser = true;
+    uid = 1000;
+    group = "users";
+    extraGroups = [ "wheel" "networkmanager" "docker"];
+    password = "demo";
+  };
+
+  # Set root password
+  users.users.root.initialHashedPassword = "";
+  users.users.root.password = "demo";
+
+  # This value determines the NixOS release with which your system is to be
+  # compatible, in order to avoid breaking some software such as database
+  # servers. You should change this only after NixOS release notes say you
+  # should.
+  system.stateVersion = "18.03"; # Did you read the comment?
   
 }
