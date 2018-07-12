@@ -63,13 +63,14 @@
     #General
     google-chrome
     docker
-		android-udev-rules jmtpfs
+    android-udev-rules jmtpfs
 
     #Code
     git
 
     #Gnome3
     chrome-gnome-shell
+    xinit
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
