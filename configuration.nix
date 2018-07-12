@@ -70,7 +70,7 @@
 
     #Gnome3
     chrome-gnome-shell
-    xinit
+    xorg.xinit
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
